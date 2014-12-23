@@ -1,0 +1,29 @@
+name:                respond-hmac-auth
+version:             0.1.0.0
+synopsis:            functions for using wai-hmac-auth with respond apps
+description:         functions for using wai-hmac-auth with respond apps
+homepage:            https://github.com/raptros/respond-hmac-auth
+license:             BSD3
+license-file:        LICENSE
+author:              aidan coyne
+maintainer:          coynea90@gmail.com
+copyright:           2014, aidan coyne
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md, CHANGELOG.md
+cabal-version:       >=1.10
+
+library
+    default-language:    Haskell2010
+    exposed-modules:
+        Web.Respond.Auth.HMAC
+    ghc-options:
+        -Wall
+    default-extensions:
+        OverloadedStrings
+    build-depends:
+        base >=4.7 && <4.8
+        , respond >= 1.1 && < 1.2            
+        , wai-hmac-auth >= 0.1 && < 1.1
+    hs-source-dirs:      
+        src
