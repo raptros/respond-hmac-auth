@@ -23,7 +23,10 @@ library
         OverloadedStrings
     build-depends:
         base >=4.7 && <4.8
+        , wai           >= 3.0 && < 4.0
         , respond >= 1.1 && < 1.2            
-        , wai-hmac-auth >= 0.1 && < 1.1
+        , wai-hmac-auth >= 1.0 && < 1.1
+        , transformers  == 0.4.*
+        , cryptohash    >= 0.11.6 && < 0.12
     hs-source-dirs:      
         src
