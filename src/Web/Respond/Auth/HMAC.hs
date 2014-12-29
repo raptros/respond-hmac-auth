@@ -36,7 +36,7 @@ authenticate conf principal = R.getRequest >>= \req -> liftIO (Auth.authenticate
 -- - perform 'authenticate' on the request
 --
 --  and if all steps succeed, runs the inner route with the new request
---  value in the context.
+--  value in the context (i.e. using 'R.withRequest').
 --
 --  if any of the steps fail, withHmacAuth calls 'R.handleAuthFailed' with
 --  the reportable error. (for the first step, this is the ReportableError
